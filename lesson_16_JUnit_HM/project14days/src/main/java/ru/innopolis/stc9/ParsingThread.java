@@ -52,31 +52,50 @@ public class ParsingThread implements Runnable {
     public ParsingThread() {
     }
 
-    public static int sum(int a, int b){
-        return a+b;
-    }
-
     /**
      * Конструктор с полной инициализацией полей.
-     * @param words список слов, хотя бы одно из которого должно содержаться в предложении.
-     * @param queueStrings очередь строк для проверки на содержание требуемых слов.
-     * @param latchReaders счетчик блокировок потоков чтения в пуле.
+     *
+     * @param words          список слов, хотя бы одно из которого должно содержаться в предложении.
+     * @param queueStrings   очередь строк для проверки на содержание требуемых слов.
+     * @param latchReaders   счетчик блокировок потоков чтения в пуле.
      * @param queueSentences очередь строк для сохранения.
-     * @param latchParsing идентификатор окончания работы потока.
+     * @param latchParsing   идентификатор окончания работы потока.
      */
-    public ParsingThread(String[] words, LinkedBlockingQueue<String> queueStrings, CountDownLatch latchReaders, LinkedBlockingQueue<String> queueSentences, CountDownLatch latchParsing) {
-        this.words = words;
-        patternSentences = Pattern.compile("([^.!?]+[.!?])");
-        patternWords = Pattern.compile(generatePattern(words));
-        this.queueStrings = queueStrings;
-        this.latchReaders = latchReaders;
-        this.queueSentences = queueSentences;
-        this.latchParsing = latchParsing;
-        minimalLength = getMinLength();
+    public ParsingThread(String[] words, LinkedBlockingQueue<String> queueStrings, CountDownLatch latchReaders, LinkedBlockingQueue<String> queueSentences, CountDownLatch latchParsing) throws NullPointerException {
+        if (words != null) {
+            this.words = words;
+            patternSentences = Pattern.compile("([^.!?]+[.!?])");
+            patternWords = Pattern.compile(generatePattern(words));
+            minimalLength = getMinLength();
+        } else {
+            throw new NullPointerException("words is null");
+        }
+
+        if (queueStrings != null) {
+            this.queueStrings = queueStrings;
+        } else {
+            throw new NullPointerException("queueStrings is null");
+        }
+        if (latchReaders != null) {
+            this.latchReaders = latchReaders;
+        } else {
+            throw new NullPointerException("latchReaders is null");
+        }
+        if (queueSentences != null) {
+            this.queueSentences = queueSentences;
+        } else {
+            throw new NullPointerException("queueSentences is null");
+        }
+        if (latchParsing != null) {
+            this.latchParsing = latchParsing;
+        } else {
+            throw new NullPointerException("latchParsing is null");
+        }
     }
 
     /**
      * Определяет длину самого короткого слова из списка слов.
+     *
      * @return длину самого короткого слова из списка слов.
      */
     private int getMinLength() {
@@ -94,6 +113,7 @@ public class ParsingThread implements Runnable {
      * в другую потокобезопасную очередь. Под обработкой следует понимать проверку: содержит ли строка из источника слово из списка.
      * Если в строке имеется хотя бы одно слово, то предложение с этим словом помещается в очередь для последующей передачи
      * в поток сохранения предложений в некий ресурс.
+     *
      * @param line проверяемая строка.
      * @throws InterruptedException прерывание потока.
      */
@@ -168,7 +188,7 @@ public class ParsingThread implements Runnable {
                     }
                 }
             }
-            if (Thread.interrupted()){
+            if (Thread.interrupted()) {
                 queueSentences.clear();
                 queueStrings.clear();
             }

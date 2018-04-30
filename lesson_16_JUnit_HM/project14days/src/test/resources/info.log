@@ -1,0 +1,32 @@
+2018-04-30 09:01:50.298 INFO  main : ParsingThreadTest.before(ParsingThreadTest.java:22) - preparation for the next test.
+2018-04-30 09:01:50.608 DEBUG main : ParsingThreadTest.constructorTest_NullQueueSentences(ParsingThreadTest.java:209) - exception in the constructor: words = null
+2018-04-30 09:01:50.612 INFO  main : ParsingThreadTest.before(ParsingThreadTest.java:22) - preparation for the next test.
+2018-04-30 09:01:50.614 DEBUG main : ParsingThreadTest.runTest_CapacityNotSufficientlyClear(ParsingThreadTest.java:117) - Thread was interrupted in the test because queueSentences capacity is not sufficiently
+2018-04-30 09:01:50.616 INFO  Thread-0 : ru.innopolis.stc9.ParsingThread.run(ParsingThread.java:179) - start of parsing
+2018-04-30 09:01:50.661 INFO  Thread-0 : ru.innopolis.stc9.ParsingThread.run(ParsingThread.java:195) - end of parsing
+2018-04-30 09:01:50.679 INFO  main : ParsingThreadTest.runTest_CapacityNotSufficientlyClear(ParsingThreadTest.java:151) - successful test
+2018-04-30 09:01:50.680 INFO  main : ParsingThreadTest.before(ParsingThreadTest.java:22) - preparation for the next test.
+2018-04-30 09:01:50.682 DEBUG main : ParsingThreadTest.runTest_NormalWithoutThread(ParsingThreadTest.java:55) - Normal works of run (without new thread)
+2018-04-30 09:01:50.683 INFO  main : ru.innopolis.stc9.ParsingThread.run(ParsingThread.java:179) - start of parsing
+2018-04-30 09:01:50.685 INFO  main : ru.innopolis.stc9.ParsingThread.run(ParsingThread.java:195) - end of parsing
+2018-04-30 09:01:50.689 INFO  main : ParsingThreadTest.before(ParsingThreadTest.java:22) - preparation for the next test.
+2018-04-30 09:01:50.693 DEBUG main : ParsingThreadTest.runTest_CapacityNotSufficiently(ParsingThreadTest.java:76) - Thread was interrupted in the test because queueSentences capacity is not sufficiently
+2018-04-30 09:01:50.696 INFO  Thread-1 : ru.innopolis.stc9.ParsingThread.run(ParsingThread.java:179) - start of parsing
+2018-04-30 09:01:50.708 ERROR Thread-1 : ru.innopolis.stc9.ParsingThread.run(ParsingThread.java:198) - the thread was interrupted
+2018-04-30 09:01:50.717 DEBUG main : ParsingThreadTest.runTest_CapacityNotSufficiently(ParsingThreadTest.java:107) - thread is interrupted in the test
+2018-04-30 09:01:50.719 INFO  main : ParsingThreadTest.runTest_CapacityNotSufficiently(ParsingThreadTest.java:108) - successful test
+2018-04-30 09:01:50.720 INFO  main : ParsingThreadTest.before(ParsingThreadTest.java:22) - preparation for the next test.
+2018-04-30 09:01:50.722 DEBUG main : ParsingThreadTest.runTest_NotInterrupted(ParsingThreadTest.java:159) - Thread is not interrupted, queueSentences capacity is sufficiently
+2018-04-30 09:01:50.727 INFO  Thread-2 : ru.innopolis.stc9.ParsingThread.run(ParsingThread.java:179) - start of parsing
+2018-04-30 09:01:50.730 INFO  Thread-2 : ru.innopolis.stc9.ParsingThread.run(ParsingThread.java:195) - end of parsing
+2018-04-30 09:01:50.737 INFO  main : ParsingThreadTest.runTest_NotInterrupted(ParsingThreadTest.java:172) - successful test
+2018-04-30 09:01:50.738 INFO  main : ParsingThreadTest.before(ParsingThreadTest.java:22) - preparation for the next test.
+2018-04-30 09:01:50.739 DEBUG main : ParsingThreadTest.constructorTest_Normal(ParsingThreadTest.java:180) - Normal works of single constructor
+2018-04-30 09:01:50.740 INFO  main : ParsingThreadTest.before(ParsingThreadTest.java:22) - preparation for the next test.
+2018-04-30 09:01:50.743 DEBUG main : ParsingThreadTest.constructorTest_NullQueueStrings(ParsingThreadTest.java:190) - exception in the constructor: queueStrings = null
+2018-04-30 09:01:50.744 INFO  main : ParsingThreadTest.before(ParsingThreadTest.java:22) - preparation for the next test.
+2018-04-30 09:01:50.745 DEBUG main : ParsingThreadTest.constructorTest_NullWords(ParsingThreadTest.java:199) - exception in the constructor: words = null
+2018-04-30 09:01:50.746 INFO  main : ParsingThreadTest.before(ParsingThreadTest.java:22) - preparation for the next test.
+2018-04-30 09:01:50.748 DEBUG main : ParsingThreadTest.constructorTest_NullLatchReaders(ParsingThreadTest.java:219) - exception in the constructor: words = null
+2018-04-30 09:01:50.749 INFO  main : ParsingThreadTest.before(ParsingThreadTest.java:22) - preparation for the next test.
+2018-04-30 09:01:50.750 DEBUG main : ParsingThreadTest.constructorTest_NullLatchParsing(ParsingThreadTest.java:229) - exception in the constructor: words = null

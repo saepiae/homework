@@ -5,6 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5bd0db05-11be-48c5-8189-8345a75c9dd2" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/ParsingThreadTest.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/code.log" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/log4j.properties" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/ru/innopolis/stc9/FileSorted.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/ru/innopolis/stc9/OtherExseption.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/ru/innopolis/stc9/ParsingThread.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/ru/innopolis/stc9/ReaderThread.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/ru/innopolis/stc9/Snoop.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/ru/innopolis/stc9/SnoopApp.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/ru/innopolis/stc9/Task.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/production/project14days/ru/innopolis/stc9/WriterThread.class" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/test/project14days/info.log" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/out/test/project14days/log4j.properties" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/code.log" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/info.log" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -65,8 +80,8 @@
       <file leaf-file-name="ParsingThreadTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ParsingThreadTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+            <state relative-caret-position="221">
+              <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -405,7 +420,7 @@
       <updated>1524981390460</updated>
       <workItem from="1524981391942" duration="10197000" />
       <workItem from="1525004602097" duration="14564000" />
-      <workItem from="1525057099987" duration="12254000" />
+      <workItem from="1525057099987" duration="13032000" />
     </task>
     <task id="LOCAL-00001" summary="my first successful test">
       <created>1524983636421</created>
@@ -428,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525068151540</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="A satisfactory test functionality for the class ParseThread">
+      <created>1525069566315</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525069566316</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -464,7 +486,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37015000" />
+    <option name="totallyTimeSpent" value="37793000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,6 +499,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -484,10 +507,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2437107" sideWeight="0.26207906" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32861635" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2437107" sideWeight="0.73792094" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32861635" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -515,6 +538,32 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -522,7 +571,8 @@
     <MESSAGE value="my first successful test" />
     <MESSAGE value="several tests with mockito. A satisfactory test functionality for the class ParsingThread" />
     <MESSAGE value="several tests with mockito" />
-    <option name="LAST_COMMIT_MESSAGE" value="several tests with mockito" />
+    <MESSAGE value="A satisfactory test functionality for the class ParseThread" />
+    <option name="LAST_COMMIT_MESSAGE" value="A satisfactory test functionality for the class ParseThread" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -747,8 +797,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ParsingThreadTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        <state relative-caret-position="221">
+          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

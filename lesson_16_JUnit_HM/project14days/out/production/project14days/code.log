@@ -1,0 +1,5 @@
+2018-04-30 09:01:27.805 INFO  pool-1-thread-1 : ParsingThread : run : 179 - start of parsing
+2018-04-30 09:01:27.809 INFO  pool-1-thread-4 : ReaderThread : run : 82 - Start c:\small\ресурсы\english\tests\16.txt
+2018-04-30 09:01:27.806 INFO  pool-1-thread-3 : ReaderThread : run : 82 - Start c:\small\ресурсы\english\tests\10.txt
+2018-04-30 09:01:27.809 INFO  pool-1-thread-5 : ReaderThread : run : 82 - Start c:\small\ресурсы\english\tests\21.txt
+2018-04-30 09:01:27.842 INFO  pool-1-thread-1 : ParsingThread : run : 195 - end of parsing

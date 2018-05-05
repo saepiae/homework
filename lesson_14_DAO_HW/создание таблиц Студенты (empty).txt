@@ -1,0 +1,129 @@
+DROP TABLE IF EXISTS registers_lessons CASCADE;
+DROP TABLE IF EXISTS study_records CASCADE;
+DROP TABLE IF EXISTS schedules CASCADE;
+DROP TABLE IF EXISTS teahers CASCADE;
+DROP TABLE IF EXISTS teachers CASCADE;
+DROP TABLE IF EXISTS specialties CASCADE;
+DROP TABLE IF EXISTS programs CASCADE;
+DROP TABLE IF EXISTS students CASCADE;
+DROP TABLE IF EXISTS teams CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+
+-- список всех специальностей обучения(код, название полное, название сокращенное)
+CREATE TABLE specialties(
+    specialty_id SERIAL,
+    specialty_name varchar(100) NOT NULL UNIQUE,
+	specialty_code varchar(4) NOT NULL UNIQUE,
+ 	PRIMARY KEY (specialty_id)
+);
+--INSERT INTO specialties (specialty_name, specialty_code) VALUES ('Java Core', 'JC'),
+--    ('Advanced Java Programming', 'JJP'),
+--    ('Java Database Connectivity', 'JDC');
+--SELECT * FROM specialties;
+
+--список всех программ обучения (код программы, специальность, дата утверждения)
+CREATE TABLE programs(
+    program_id SERIAL,
+	specialty integer REFERENCES specialties(specialty_id),
+    approval_date date NOT NULL,
+ 	PRIMARY KEY (program_id)
+);
+--INSERT INTO programs (specialty, approval_date) VALUES (1, '2018-01-01'),
+--(3, '2018-01-01');
+--(2, '2018-01-21'),
+--(3, '2018-03-27');
+--(1, '2018-04-01'),
+--SELECT * FROM programs;
+
+--SELECT p.program_id AS program, s.specialty_id AS spec_id, s.specialty_name AS name, s.specialty_code AS abbr, p.approval_date AS data
+--FROM programs p
+--INNER JOIN specialties s ON p.specialty = s.specialty_id AND p.approval_date='2018-01-21';
+
+--поурочный план обучения (код программы, порядковый номер урока, название темы)
+CREATE TABLE schedules(
+	schedule_id SERIAL,
+	program integer REFERENCES programs(program_id),
+	lesson_serial_number integer NOT NULL,
+	lesson_theme text NOT NULL,
+	PRIMARY KEY (schedule_id),
+	UNIQUE(program, lesson_serial_number)
+);
+--INSERT INTO schedules (program, lesson_serial_number, lesson_theme) VALUES
+--  (1, 1, 'Введение'),
+--  (1, 2, 'Основы конструкции языка'),
+--  (2, 1, 'Введение'),
+--  (2, 2, 'Типы данных'),
+--  (2, 3, 'Основы конструкции языка'),
+--  (2, 4, 'Экзамен'),
+--  (3, 1, 'Тест навыков'),
+--  (3, 2, 'Введение'),
+--  (3, 3, 'Логирование'),
+--  (3, 4, 'Тестирование'),
+--  (3, 5, 'Экзамен'),
+--  (4, 1, 'JDBC'),
+--  (4, 2, 'тест'),
+--  (5, 2, 'основы SQL'),
+--  (5, 2, 'JDBC'),
+--  (5, 2, 'экзамен');
+-- список всех групп (код группы, дата начала обучения, дата окончания обучения, номер потока, программа обучения)
+CREATE TABLE teams(
+    team_id SERIAL,
+	start_training date NOT NULL,
+	end_training date NOT NULL,
+	group_serial_number integer NOT NULL,
+	program integer REFERENCES programs(program_id),	--проверить, чтобы дата создания программы была не позднее, чем начало  обучения
+ 	PRIMARY KEY (team_id)
+);
+--аккаунт пользователя (логин = id, пароль(?), серия и номер паспорта, ФИО, дата рождения, адрес, телефон, контакты по соц.сетям, инфо по имеющемуся образованию.)
+CREATE TABLE users(
+	users_id SERIAL,
+	users_password varchar(20) NOT NULL,
+	users_passport integer NOT NULL,
+	first_name varchar(50) NOT NULL,
+    second_name varchar(50) NOT NULL,
+    patronymic varchar(50),
+    birthday date,
+    adress varchar(100),
+    phone integer,
+    skype varchar(50),
+    telegram varchar(100),
+    education varchar(100),
+	is_student boolean NOT NULL,
+	PRIMARY KEY (users_id)
+);
+--студент (дополняем данными группе обучения)
+CREATE TABLE students(
+	student_id SERIAL,
+	users integer REFERENCES users(users_id),
+	team integer REFERENCES teams(team_id),
+	PRIMARY KEY (student_id)
+);
+--преподаватель (дополняем данными по группам, которым он преподавает)
+CREATE TABLE teachers(
+	teacher_id SERIAL,
+	users integer REFERENCES users(users_id),
+	team integer REFERENCES teams(team_id),
+	PRIMARY KEY (teacher_id)
+);
+--журнал проведения занятий(код урока, группа студентов, преподаватель, данные о занятии из расписания по программе обучения,
+--дата проведения занятия, ДЗ, комментарии)
+CREATE TABLE registers_lessons(
+	lesson_id SERIAL,
+    team integer REFERENCES teams(team_id),
+    teacher_id integer REFERENCES teachers(teacher_id),
+    lesson integer REFERENCES schedules(schedule_id),
+    lesson_date date NOT NULL,
+    homework text,
+	comment text,
+    PRIMARY KEY (lesson_id)
+);
+--журнал посещений и успеваемости(код записи = is, код проведенного занятия из журнала занятий, студент, был/не был на заняти, оценка, комментарий)
+CREATE TABLE study_records(
+    record_id SERIAL,
+    lesson_id integer REFERENCES registers_lessons(lesson_id),
+    student_id varchar(20) REFERENCES students(student_id),
+    on_lesson boolean DEFAULT FALSE,
+    mark integer CHECK (mark>0 AND mark<=5 AND on_lesson),
+    comment text,
+    PRIMARY KEY (register_id)
+);
